@@ -5,8 +5,11 @@ namespace AmjadIqbal\DriverJS;
 class Driver
 {
     protected array $config = [];
+
     protected array $steps = [];
+
     protected ?string $action = null;
+
     protected array $actionPayload = [];
 
     public static function make(array $config = []): self
@@ -63,7 +66,7 @@ class Driver
                 'description' => $description,
             ],
         ];
-        if (!empty($options)) {
+        if (! empty($options)) {
             $step['options'] = $options;
         }
         $this->steps[] = $step;

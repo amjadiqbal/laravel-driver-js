@@ -7,6 +7,7 @@ use Illuminate\View\Component;
 class DriverJs extends Component
 {
     public array $steps;
+
     public array $config;
 
     public function __construct(array $steps = [], array $config = [])

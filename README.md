@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/amjadiqbal/laravel-driver-js/main/.github/banner.png" alt="Laravel Driver.js" width="100%" />
+  <img src="./assets/laravel-driver-js.png" alt="Laravel Driver.js" width="100%" />
 </p>
 
 <p align="center">

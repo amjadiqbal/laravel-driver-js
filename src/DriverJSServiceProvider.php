@@ -11,7 +11,7 @@ class DriverJSServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/driver-js.php', 'driver-js');
         $this->app->singleton('driverjs', function () {
-            return new Manager();
+            return new Manager;
         });
     }
 
