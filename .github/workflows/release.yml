@@ -1,0 +1,25 @@
+name: release
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+      - name: Notify Packagist (optional)
+        if: ${{ secrets.PACKAGIST_TOKEN != '' && secrets.PACKAGIST_USERNAME != '' }}
+        uses: mnavarrocarter/packagist-update@v1.0
+        with:
+          username: ${{ secrets.PACKAGIST_USERNAME }}
+          api_token: ${{ secrets.PACKAGIST_TOKEN }}
+          package_name: amjadiqbal/laravel-driver-js

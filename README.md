@@ -10,7 +10,8 @@
   <a href="https://github.com/amjadiqbal/laravel-driver-js/actions/workflows/pint.yml"><img alt="Code Style" src="https://github.com/amjadiqbal/laravel-driver-js/actions/workflows/pint.yml/badge.svg"></a>
   <a href="https://github.com/amjadiqbal/laravel-driver-js/actions/workflows/phpstan.yml"><img alt="Static Analysis" src="https://github.com/amjadiqbal/laravel-driver-js/actions/workflows/phpstan.yml/badge.svg"></a>
   <a href="https://codecov.io/gh/amjadiqbal/laravel-driver-js"><img alt="Coverage" src="https://codecov.io/gh/amjadiqbal/laravel-driver-js/branch/main/graph/badge.svg"></a>
-  <img alt="PHP" src="https://img.shields.io/badge/PHP-%5E8.1-777BB4?logo=php">
+  <a href="https://github.com/amjadiqbal/laravel-driver-js/releases"><img alt="Release" src="https://img.shields.io/github/v/release/amjadiqbal/laravel-driver-js?display_name=tag"></a>
+  <img alt="PHP" src="https://img.shields.io/badge/PHP-%5E8.2-777BB4?logo=php">
   <img alt="Laravel" src="https://img.shields.io/badge/Laravel-10%20%7C%2011-FF2D20?logo=laravel">
   <a href="https://driverjs.com"><img alt="Driver.js" src="https://img.shields.io/badge/Driver.js-1.3%2B-black"></a>
   <a href="https://pestphp.com"><img alt="Tests" src="https://img.shields.io/badge/Tests-Pest-2A5FE3"></a>
@@ -33,7 +34,7 @@ Professional Laravel wrapper for Driver.js (v1.3+). Easily create interactive pr
 
 ## Requirements
 
-- PHP ^8.1
+- PHP ^8.2
 - Laravel 10 or 11
 - Driver.js v1.3+
 
