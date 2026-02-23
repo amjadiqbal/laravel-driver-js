@@ -55,6 +55,13 @@
     "test": "vendor/bin/pest",
     "lint": "vendor/bin/pint"
   },
+  "archive": {
+    "exclude": [
+      "assets/**",
+      ".github/**",
+      "tests/**"
+    ]
+  },
   "config": {
     "allow-plugins": {
       "pestphp/pest-plugin": true
