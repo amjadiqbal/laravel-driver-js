@@ -1,0 +1,63 @@
+{
+  "name": "amjadiqbal/laravel-driver-js",
+  "description": "A professional Laravel wrapper for Driver.js. Easily create interactive product tours, feature highlights, and user onboarding flows using a fluent PHP API.",
+  "keywords": [
+    "Laravel",
+    "Driver.js",
+    "driverjs",
+    "product tours",
+    "onboarding",
+    "feature highlights",
+    "guided walkthroughs",
+    "fluent api",
+    "laravel package",
+    "interactive tutorials"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Amjad Iqbal"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "illuminate/support": "^10.0|^11.0",
+    "illuminate/view": "^10.0|^11.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.0|^9.0",
+    "pestphp/pest": "^2.0",
+    "pestphp/pest-plugin-laravel": "^2.0",
+    "laravel/pint": "^1.13"
+  },
+  "autoload": {
+    "psr-4": {
+      "AmjadIqbal\\DriverJS\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AmjadIqbal\\DriverJS\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AmjadIqbal\\DriverJS\\DriverJSServiceProvider"
+      ],
+      "aliases": {
+        "Driver": "AmjadIqbal\\DriverJS\\Facades\\Driver"
+      }
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/pest",
+    "lint": "vendor/bin/pint"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
