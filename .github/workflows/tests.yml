@@ -16,8 +16,13 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          coverage: none
+          coverage: xdebug
           tools: composer:v2
       - run: composer validate
       - run: composer install --prefer-dist --no-interaction --no-progress
-      - run: vendor/bin/pest
+      - run: vendor/bin/pest --coverage-clover coverage.xml
+      - uses: codecov/codecov-action@v4
+        with:
+          files: coverage.xml
+          flags: unittests
+          fail_ci_if_error: false

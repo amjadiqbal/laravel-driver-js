@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/laravel-driver-js.png" alt="Laravel Driver.js" width="100%" />
+  <img src="https://raw.githubusercontent.com/amjadiqbal/laravel-driver-js/main/assets/laravel-driver-js.png" alt="Laravel Driver.js" width="100%" />
 </p>
 
 <p align="center">
@@ -8,6 +8,8 @@
   <a href="https://packagist.org/packages/amjadiqbal/laravel-driver-js"><img alt="Downloads" src="https://img.shields.io/packagist/dt/amjadiqbal/laravel-driver-js.svg"></a>
   <a href="https://github.com/amjadiqbal/laravel-driver-js/actions/workflows/tests.yml"><img alt="CI" src="https://github.com/amjadiqbal/laravel-driver-js/actions/workflows/tests.yml/badge.svg"></a>
   <a href="https://github.com/amjadiqbal/laravel-driver-js/actions/workflows/pint.yml"><img alt="Code Style" src="https://github.com/amjadiqbal/laravel-driver-js/actions/workflows/pint.yml/badge.svg"></a>
+  <a href="https://github.com/amjadiqbal/laravel-driver-js/actions/workflows/phpstan.yml"><img alt="Static Analysis" src="https://github.com/amjadiqbal/laravel-driver-js/actions/workflows/phpstan.yml/badge.svg"></a>
+  <a href="https://codecov.io/gh/amjadiqbal/laravel-driver-js"><img alt="Coverage" src="https://codecov.io/gh/amjadiqbal/laravel-driver-js/branch/main/graph/badge.svg"></a>
   <img alt="PHP" src="https://img.shields.io/badge/PHP-%5E8.1-777BB4?logo=php">
   <img alt="Laravel" src="https://img.shields.io/badge/Laravel-10%20%7C%2011-FF2D20?logo=laravel">
   <a href="https://driverjs.com"><img alt="Driver.js" src="https://img.shields.io/badge/Driver.js-1.3%2B-black"></a>
