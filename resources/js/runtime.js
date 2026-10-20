@@ -106,9 +106,13 @@
     }
   }
 
+  // True between Livewire's livewire:navigate and livewire:navigated events. Tours
+  // registered by the incoming page wait for the swap to finish before measuring.
+  var navigating = false;
+
   function register(tour) {
     tours[tour.name] = tour;
-    whenReady(boot);
+    if (!navigating) whenReady(boot);
   }
 
   // <button data-driver-start="welcome">Take the tour</button>
@@ -129,7 +133,15 @@
   });
 
   // Livewire wire:navigate swaps the page without a DOMContentLoaded event.
-  document.addEventListener('livewire:navigated', boot);
+  document.addEventListener('livewire:navigate', function () {
+    navigating = true;
+    if (active && active.instance.isActive()) active.instance.destroy();
+    Object.keys(tours).forEach(function (name) { delete tours[name]; });
+  });
+  document.addEventListener('livewire:navigated', function () {
+    navigating = false;
+    setTimeout(boot, 0);
+  });
 
   window.LaravelDriverJs = {
     register: register,
