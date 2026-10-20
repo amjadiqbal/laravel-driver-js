@@ -83,9 +83,10 @@ class Driver implements Arrayable, Jsonable, JsonSerializable
     }
 
     /**
-     * Auto-start only until the visitor finishes or closes the tour once.
-     * Remembered in the browser's localStorage under this key; change the key
-     * (e.g. "welcome-v2") to show an updated tour to everyone again.
+     * Auto-start only the first time a visitor sees the tour. Remembered in
+     * the browser's localStorage under this key as soon as the tour starts;
+     * change the key (e.g. "welcome-v2") to show an updated tour again.
+     * Buttons and events can still start it at any time.
      */
     public function once(string $key): self
     {

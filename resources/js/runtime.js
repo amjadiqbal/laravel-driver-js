@@ -54,7 +54,6 @@
 
     var userDestroyed = config.onDestroyed;
     config.onDestroyed = function (element, step, opts) {
-      if (tour.once) storage('set', tour.once);
       if (active && active.name === tour.name) active = null;
       if (userDestroyed) userDestroyed(element, step, opts);
     };
@@ -77,6 +76,10 @@
     if (!instance) return null;
 
     active = { name: name, instance: instance };
+
+    // Recorded on start, not on destroy: Driver.js skips onDestroyed when a tour is
+    // closed before its first highlight transition settles.
+    if (tour.once) storage('set', tour.once);
 
     if (tour.highlight) {
       instance.highlight(tour.highlight);
@@ -147,7 +150,7 @@
     register: register,
     start: start,
     reset: function (key) { storage('remove', key); },
-    active: function () { return active ? active.instance : null; },
+    active: function () { return active && active.instance.isActive() ? active.instance : null; },
     tours: tours
   };
 })();

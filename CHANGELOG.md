@@ -16,7 +16,7 @@ which Driver.js 1.x does not have. It also could not be installed on Laravel 12 
 - Named tours: `Driver::tour('welcome')`, started from a button (`data-driver-start="welcome"`), Alpine
   (`$dispatch('driver-js:start', { tour: 'welcome' })`) or Livewire (`$this->dispatch(...)` or the
   `StartsTours` trait).
-- `once('welcome-v1')`: auto-start a tour only until the visitor finishes or closes it, remembered in
+- `once('welcome-v1')`: auto-start a tour only the first time a visitor sees it, remembered in
   `localStorage`. Change the key to show an updated tour again.
 - `manual()` / `autoStart(false)` to register a tour without starting it.
 - `highlight()` for a single element instead of a tour.
