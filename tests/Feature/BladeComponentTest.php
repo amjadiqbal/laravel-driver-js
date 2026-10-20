@@ -5,6 +5,7 @@ use AmjadIqbal\DriverJS\Facades\Driver as DriverFacade;
 use AmjadIqbal\DriverJS\Manager;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Vite;
 
 function tourDefinition(string $html): array
 {
@@ -96,4 +97,20 @@ it('adds a passive line to php artisan about', function () {
     expect(Artisan::output())
         ->toContain('Driver.js tours')
         ->toContain('amjad.com.pk/contact?utm_source=artisan&utm_medium=about&utm_campaign=laravel-driver-js');
+});
+
+it('adds the Vite CSP nonce to its script tags', function () {
+    Vite::useCspNonce('abc123');
+
+    $html = Blade::render('<x-driver-js :steps="[]" />');
+
+    expect(substr_count($html, 'nonce="abc123"'))->toBe(3);
+});
+
+it('publishes the config and views', function () {
+    Artisan::call('vendor:publish', ['--tag' => 'driver-js-config', '--force' => true]);
+    Artisan::call('vendor:publish', ['--tag' => 'driver-js-views', '--force' => true]);
+
+    expect(config_path('driver-js.php'))->toBeFile()
+        ->and(resource_path('views/vendor/driver-js/components/driver-js.blade.php'))->toBeFile();
 });
