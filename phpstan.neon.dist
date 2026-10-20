@@ -1,0 +1,14 @@
+includes:
+  - vendor/larastan/larastan/extension.neon
+
+parameters:
+  paths:
+    - src
+  level: 6
+  tmpDir: build/phpstan
+  ignoreErrors:
+    # The trait is for app Livewire components; it is exercised in tests/Feature/LivewireTraitTest.php.
+    - identifier: trait.unused
+    # Namespaced package view registered in the service provider.
+    - identifier: argument.type
+      path: src/View/Components/DriverJs.php

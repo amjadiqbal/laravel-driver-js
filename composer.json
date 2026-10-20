@@ -1,73 +1,79 @@
 {
-  "name": "amjadiqbal/laravel-driver-js",
-  "description": "A professional Laravel wrapper for Driver.js. Easily create interactive product tours, feature highlights, and user onboarding flows using a fluent PHP API.",
-  "keywords": [
-    "Laravel",
-    "Driver.js",
-    "driverjs",
-    "product tours",
-    "onboarding",
-    "feature highlights",
-    "guided walkthroughs",
-    "fluent api",
-    "laravel package",
-    "interactive tutorials"
-  ],
-  "type": "library",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Amjad Iqbal"
-    }
-  ],
-  "require": {
-    "php": "^8.2",
-    "illuminate/support": "^10.0|^11.0",
-    "illuminate/view": "^10.0|^11.0"
-  },
-  "require-dev": {
-    "orchestra/testbench": "^8.0|^9.0",
-    "pestphp/pest": "^2.0",
-    "pestphp/pest-plugin-laravel": "^2.0",
-    "laravel/pint": "^1.13",
-    "phpstan/phpstan": "^1.11",
-    "larastan/larastan": "^2.9"
-  },
-  "autoload": {
-    "psr-4": {
-      "AmjadIqbal\\DriverJS\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "AmjadIqbal\\DriverJS\\Tests\\": "tests/"
-    }
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "AmjadIqbal\\DriverJS\\DriverJSServiceProvider"
-      ],
-      "aliases": {
-        "Driver": "AmjadIqbal\\DriverJS\\Facades\\Driver"
-      }
-    }
-  },
-  "scripts": {
-    "test": "vendor/bin/pest",
-    "lint": "vendor/bin/pint",
-    "analyse": "vendor/bin/phpstan analyse"
-  },
-  "archive": {
-    "exclude": [
-      "assets/**",
-      ".github/**",
-      "tests/**"
-    ]
-  },
-  "config": {
-    "allow-plugins": {
-      "pestphp/pest-plugin": true
-    }
-  }
+    "name": "amjadiqbal/laravel-driver-js",
+    "description": "Driver.js product tours and onboarding for Laravel: build guided tours in PHP, render them with a Blade component, start them from Livewire or Alpine, and show each tour once per user.",
+    "keywords": [
+        "laravel",
+        "laravel-package",
+        "driver.js",
+        "driverjs",
+        "product-tour",
+        "onboarding",
+        "user-onboarding",
+        "guided-tour",
+        "walkthrough",
+        "feature-highlight",
+        "blade",
+        "livewire",
+        "alpinejs"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/amjadiqbal/laravel-driver-js",
+    "authors": [
+        {
+            "name": "Amjad Iqbal",
+            "homepage": "https://amjad.com.pk",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/amjadiqbal/laravel-driver-js/issues",
+        "source": "https://github.com/amjadiqbal/laravel-driver-js",
+        "docs": "https://github.com/amjadiqbal/laravel-driver-js#readme"
+    },
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^12.0|^13.0",
+        "illuminate/view": "^12.0|^13.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.20",
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "phpstan/phpstan": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AmjadIqbal\\DriverJS\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AmjadIqbal\\DriverJS\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AmjadIqbal\\DriverJS\\DriverJSServiceProvider"
+            ],
+            "aliases": {
+                "Driver": "AmjadIqbal\\DriverJS\\Facades\\Driver"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "lint": "vendor/bin/pint --test",
+        "analyse": "vendor/bin/phpstan analyse --memory-limit=1G"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
