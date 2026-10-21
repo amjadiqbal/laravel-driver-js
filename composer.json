@@ -1,6 +1,6 @@
 {
     "name": "amjadiqbal/laravel-driver-js",
-    "description": "Driver.js product tours and onboarding for Laravel: build guided tours in PHP, render them with a Blade component, start them from Livewire or Alpine, and show each tour once per user.",
+    "description": "Driver.js product tours and onboarding for Laravel: build guided tours in PHP, render them with a Blade component, start them from Livewire or Alpine, and show a tour only the first time a visitor sees it (per browser).",
     "keywords": [
         "laravel",
         "laravel-package",

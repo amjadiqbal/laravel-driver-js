@@ -83,8 +83,8 @@ class Driver implements Arrayable, Jsonable, JsonSerializable
     }
 
     /**
-     * Auto-start only the first time a visitor sees the tour. Remembered in
-     * the browser's localStorage under this key as soon as the tour starts;
+     * Auto-start only the first time a visitor sees the tour, per browser.
+     * Remembered in the browser's localStorage under this key as soon as the tour starts;
      * change the key (e.g. "welcome-v2") to show an updated tour again.
      * Buttons and events can still start it at any time.
      */

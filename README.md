@@ -8,7 +8,8 @@
 # Laravel Driver.js: product tours and onboarding for Laravel
 
 Build [Driver.js](https://driverjs.com) product tours and onboarding walkthroughs in PHP, render them with
-one Blade component, start them from a button, Alpine or Livewire, and show each tour only once per user.
+one Blade component, start them from a button, Alpine or Livewire, and show a tour only the first time a
+visitor sees it (per browser).
 No JavaScript to write, no npm build step.
 
 [![Latest Version](https://img.shields.io/packagist/v/amjadiqbal/laravel-driver-js.svg?style=flat-square)](https://packagist.org/packages/amjadiqbal/laravel-driver-js)
@@ -20,7 +21,7 @@ No JavaScript to write, no npm build step.
 </p>
 
 ```php
-// In a controller: a welcome tour that new users see once
+// In a controller: a welcome tour shown only the first time (per browser)
 $tour = Driver::tour('welcome')
     ->once('welcome-v1')
     ->step(null, 'Welcome to Acme', 'A 30-second tour of where everything lives.')
@@ -43,8 +44,9 @@ wiring it to Livewire yourself. This package does those parts for you:
 
 - **Tours in PHP.** Steps and options are built with a fluent API that uses Driver.js's own option names, and
   invalid sides, alignments, buttons and hook names are rejected before they reach the browser.
-- **Show once.** `once('welcome-v1')` auto-starts a tour the first time a visitor sees it. Ship a new version
-  of the tour by changing the key.
+- **Show once.** `once('welcome-v1')` auto-starts a tour only the first time a visitor sees it, per browser:
+  it is remembered in `localStorage`, so the same person on another browser or device sees it again. Ship a
+  new version of the tour by changing the key.
 - **Start from anywhere.** A button with `data-driver-start`, an Alpine `$dispatch`, or `$this->startTour()`
   in a Livewire component, including after `wire:navigate`.
 - **Safe output.** Tour text is escaped with `Js::from()`. Driver.js loads from a pinned jsDelivr URL with

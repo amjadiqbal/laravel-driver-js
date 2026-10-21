@@ -4,6 +4,13 @@ All notable changes to `amjadiqbal/laravel-driver-js` are documented here. The f
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- Docs and package metadata: `once()` shows a tour only the first time a visitor sees it **per browser**
+  (it is stored in `localStorage`), not once per user account. The wording previously said "once per user".
+
 ## [1.0.0] - 2026-10-21
 
 Rebuilt against the real Driver.js 1.x API. v0.1.0 did not work with any current Driver.js: its default
@@ -49,5 +56,6 @@ which Driver.js 1.x does not have. It also could not be installed on Laravel 12 
 
 - Initial release.
 
+[Unreleased]: https://github.com/amjadiqbal/laravel-driver-js/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/amjadiqbal/laravel-driver-js/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/amjadiqbal/laravel-driver-js/releases/tag/v0.1.0
