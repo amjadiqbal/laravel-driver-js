@@ -232,7 +232,6 @@ product tour designed and wired up for you, or need something this package doesn
 ## Support
 
 - 🐛 **Bug or feature request**: [open an issue](https://github.com/amjadiqbal/laravel-driver-js/issues)
-- 💬 **Questions and community**: [join the Discord](https://discord.gg/REPLACE-WITH-INVITE)
 - 🔒 **Security issue**: please report privately via GitHub's security tab
 
 ## Need this customised, or something built?
@@ -240,7 +239,6 @@ product tour designed and wired up for you, or need something this package doesn
 I'm available for custom development, package integration, and technical consulting.
 
 [![Hire me on Upwork](https://img.shields.io/badge/Hire%20me-Upwork-6FDA44?style=flat-square&logo=upwork&logoColor=white)](https://www.upwork.com/freelancers/amjadkhatri)
-[![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/REPLACE-WITH-INVITE)
 
 ## More packages
 
