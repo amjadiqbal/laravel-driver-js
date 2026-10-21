@@ -12,6 +12,8 @@ one Blade component, start them from a button, Alpine or Livewire, and show a to
 visitor sees it (per browser).
 No JavaScript to write, no npm build step.
 
+Docs and demo: https://amjad.com.pk/laravel/packages/laravel-driver-js
+
 [![Latest Version](https://img.shields.io/packagist/v/amjadiqbal/laravel-driver-js.svg?style=flat-square)](https://packagist.org/packages/amjadiqbal/laravel-driver-js)
 [![PHP Version](https://img.shields.io/packagist/php-v/amjadiqbal/laravel-driver-js?style=flat-square)](https://packagist.org/packages/amjadiqbal/laravel-driver-js)
 [![License](https://img.shields.io/packagist/l/amjadiqbal/laravel-driver-js.svg?style=flat-square)](LICENSE.md)

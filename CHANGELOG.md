@@ -10,6 +10,8 @@ All notable changes to `amjadiqbal/laravel-driver-js` are documented here. The f
 
 - Docs and package metadata: `once()` shows a tour only the first time a visitor sees it **per browser**
   (it is stored in `localStorage`), not once per user account. The wording previously said "once per user".
+- Package homepage is now the docs and demo page, https://amjad.com.pk/laravel/packages/laravel-driver-js
+  (composer.json `homepage` and a link in the README).
 
 ## [1.0.0] - 2026-10-21
 
