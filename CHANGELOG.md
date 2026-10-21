@@ -4,7 +4,7 @@ All notable changes to `amjadiqbal/laravel-driver-js` are documented here. The f
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
-## [1.0.0] - Unreleased
+## [1.0.0] - 2026-10-21
 
 Rebuilt against the real Driver.js 1.x API. v0.1.0 did not work with any current Driver.js: its default
 CDN URL (`driver.js/dist/driver.min.js`) returns 404 and it called `new Driver()` / `defineSteps()`,
@@ -48,3 +48,6 @@ which Driver.js 1.x does not have. It also could not be installed on Laravel 12 
 ## [0.1.0] - 2026-02-23
 
 - Initial release.
+
+[1.0.0]: https://github.com/amjadiqbal/laravel-driver-js/compare/v0.1.0...v1.0.0
+[0.1.0]: https://github.com/amjadiqbal/laravel-driver-js/releases/tag/v0.1.0
